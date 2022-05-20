@@ -23,14 +23,17 @@ function newNonPlayableCharacter(x, y) {
 
     setInterval(moveCharacter, 1)
 
-    function walkEast() {
+    async function walkEast() {
+        
         direction = 'east'
         element.src = `./assets/red-character/east.gif`
+     
     }
 
     function walkNorth() {
         direction = 'north'
         element.src = `./assets/red-character/north.gif`
+        
     }
 
     function walkWest() {
@@ -57,3 +60,12 @@ function newNonPlayableCharacter(x, y) {
         stop: stop
     }
 }
+async function sleep(time){
+    await sleep(time)
+    sleep(2000)
+    stop()
+    }  
+
+
+
+
